@@ -1,4 +1,4 @@
-# ES profiler data scientist challenge
+# ESProfiler data scientist challenge
 
 Thank you in advance for taking the time to attempt our data science challenge. 
 
