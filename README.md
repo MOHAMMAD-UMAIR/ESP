@@ -2,6 +2,7 @@
 
 Thank you in advance for taking the time to attempt our data science challenge. 
 
+
 ## Overview
 
 The Mitre Attack Stix data is a complex json file containing data about adversaries and their techniques. Unfortunately it is arranged in a relatively flat array that makes it hard for us to clearly see all the tecniques and how popular these are.
