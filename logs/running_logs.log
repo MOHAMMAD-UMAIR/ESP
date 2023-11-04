@@ -1,1 +1,114 @@
 [2023-11-04 15:52:10,052: INFO: main: Custom Log]
+[2023-11-04 18:28:26,268: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:28:26,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:29:42,331: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:29:42,334: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:29:42,335: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:30:03,010: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:30:03,013: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:30:03,016: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:30:03,019: INFO: common: created directory at: artifacts_root]
+[2023-11-04 18:30:03,021: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 18:30:16,960: INFO: 68860491: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 287C:083C:52636A:561F91:65468DAA
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2023 18:30:04 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7370-LHR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1699122603.994220,VS0,VE1827
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: cf14c76997f05afabbce96c9c79ccb7876482743
+Expires: Sat, 04 Nov 2023 18:35:04 GMT
+Source-Age: 2
+
+]
+[2023-11-04 18:31:32,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:31:32,189: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:31:32,190: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:31:32,192: INFO: common: created directory at: artifacts_root]
+[2023-11-04 18:31:32,193: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 18:31:32,194: INFO: 68860491: File already exists of size: ~ 40796 KB]
+[2023-11-04 18:33:50,809: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:33:50,811: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:33:50,814: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:33:50,816: INFO: common: created directory at: artifacts_root]
+[2023-11-04 18:33:50,818: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 18:33:50,818: INFO: 68860491: File already exists of size: ~ 40796 KB]
+[2023-11-04 18:34:11,806: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:34:11,808: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:34:11,809: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:34:11,811: INFO: common: created directory at: artifacts_root]
+[2023-11-04 18:34:11,812: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 18:34:16,815: INFO: 68860491: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 287C:083C:52636A:561F91:65468DAA
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2023 18:34:11 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7380-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1699122852.596672,VS0,VE2
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 540f6dbab05f390e75eb6b9441298299b25a92cd
+Expires: Sat, 04 Nov 2023 18:39:11 GMT
+Source-Age: 248
+
+]
+[2023-11-04 18:36:46,627: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 18:36:46,629: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 18:36:46,632: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 18:36:46,634: INFO: common: created directory at: artifacts_root]
+[2023-11-04 18:36:46,635: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 18:36:53,416: INFO: 68860491: artifacts/data_ingestion/data.json download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 287C:083C:52636A:561F91:65468DAA
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2023 18:36:46 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7371-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1699123007.598378,VS0,VE151
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d1b90561e4718bd11767d44239a5d7fcadcbffc9
+Expires: Sat, 04 Nov 2023 18:41:46 GMT
+Source-Age: 0
+
+]

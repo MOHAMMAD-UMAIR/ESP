@@ -1,0 +1,8 @@
+artifacts_root: artifacts_root
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-14.0.json
+  local_data_file: artifacts/data_ingestion/data.json
+  #unzip_dir: artifacts/data_ingestion
+
