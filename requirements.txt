@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+matploblib
+ensure
+pyYaml
+types-pyYaml
