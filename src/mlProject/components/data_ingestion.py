@@ -3,9 +3,9 @@ import os
 from pathlib import Path
 import urllib.request as request
 import zipfile
-from mlProject import logger
-from mlProject.utils.common import get_size
-from mlProject.entity import DataIngestionConfig
+from src.mlProject import logger
+from src.mlProject.utils.common import get_size
+from src.mlProject.entity.config_entity import DataIngestionConfig
 
 
 # Downloading the data and unzipping it 

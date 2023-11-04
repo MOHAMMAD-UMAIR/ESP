@@ -1,5 +1,6 @@
-from mlProject import logger
-from mlProject.pipeline.data_ingestion import DataIngestionTrainingPipeine
+from src.mlProject import logger
+from src.mlProject.pipeline.data_ingestion import DataIngestionTrainingPipeine
+
 
 
 STAGE_NAME= "DATA INGESTION"

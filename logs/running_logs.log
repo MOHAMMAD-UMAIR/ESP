@@ -112,3 +112,43 @@ Expires: Sat, 04 Nov 2023 18:41:46 GMT
 Source-Age: 0
 
 ]
+[2023-11-04 19:24:56,079: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 19:24:56,081: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 19:24:56,083: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 19:24:56,084: INFO: common: created directory at: artifacts_root]
+[2023-11-04 19:24:56,085: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 19:25:04,133: INFO: 68860491: artifacts/data_ingestion/data.json download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 287C:083C:52636A:561F91:65468DAA
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2023 19:24:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lhr7355-LHR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1699125896.896021,VS0,VE154
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 903614a0691b08cc0231f4f5040f41554ca70045
+Expires: Sat, 04 Nov 2023 19:29:56 GMT
+Source-Age: 0
+
+]
+[2023-11-04 21:30:24,126: INFO: main: >>>>>>>>> Stage started : DATA INGESTION]
+[2023-11-04 21:30:24,129: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-04 21:30:24,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-04 21:30:24,130: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-04 21:30:24,131: INFO: common: created directory at: artifacts_root]
+[2023-11-04 21:30:24,131: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-04 21:30:24,132: INFO: data_ingestion: File already exists of size: ~ 40796 KB]
+[2023-11-04 21:30:24,132: INFO: main: >>>>>>>> Stage Completed : DATA INGESTION]
