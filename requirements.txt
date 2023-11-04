@@ -1,6 +1,15 @@
+pandas 
+#mlflow==2.2.2
+notebook
+numpy
+scikit-learn
+matplotlib
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-PyYAML
 Flask
 Flask-Cors
-matploblib
-ensure
-pyYaml
-types-pyYaml
+#-e .
