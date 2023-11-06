@@ -28,7 +28,7 @@ def load_data(path:str):
 
 
 def plot_bottom_center():
-    data=load_data(r'ESP\artifacts\data_transformation\attack_pattern_to_adversery.json')
+    data=load_data('attack_pattern_to_adversery.json')
     
     fig = px.bar(data, 
                  x='popularity', 
@@ -39,7 +39,7 @@ def plot_bottom_center():
     st.plotly_chart(fig, use_container_width=True)
 
 
-df=load_data(r'C:\Users\umair\Downloads\ESP\data-scientist-challenge\artifacts\data_transformation\attack_pattern_to_adversery.json')
+df=load_data('attack_pattern_to_adversery.json')
 #print(df.head)
 with st.expander("Data Preview"):
     st.dataframe(df)
