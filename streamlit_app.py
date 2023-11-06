@@ -28,7 +28,7 @@ def load_data(path:str):
 
 
 def plot_bottom_center():
-    data=load_data(r'C:\Users\umair\Downloads\ESP\data-scientist-challenge\artifacts\data_transformation\attack_pattern_to_adversery.json')
+    data=load_data(r'ESP\artifacts\data_transformation\attack_pattern_to_adversery.json')
     
     fig = px.bar(data, 
                  x='popularity', 
