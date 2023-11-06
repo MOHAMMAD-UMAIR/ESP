@@ -153,9 +153,18 @@ def load_create_df(path:Path):
         columns1 = ['id', 'name', 'x_mitre_is_subtechnique']
         objects1 = extract_objects(data, object_type1, columns1)
         df_attack = pd.DataFrame(objects1)
-        print(df_attack)
+        #print(df_attack)
         df_attack.columns = ['attack_id', 'attack_name', 'is_subtechnique']
-        logger.info(f"Data frame created for attack types ")
+        
+        
+     
+        columns_La = ['x_mitre_platforms','id', 'x_mitre_is_subtechnique']
+        objects_LA = extract_objects(data, object_type1, columns_La)
+        df_attack_LA = pd.DataFrame(objects_LA)
+        print(df_attack)
+        df_attack_LA.columns = ['platforms', 'attack_id', 'is_subtechnique']
+        df_attack_LA.to_csv('df_attack_LA.csv').reset_index(drop=True)
+     
 
         # Extract objects for 'malware'
         object_type2 = 'malware'
@@ -205,6 +214,8 @@ def attack_to_adversery(df_attack,df_relationship,df_intrusion,df_campaign,file)
         attack_name = group['attack_name'].iloc[0]
         is_subtechnique = group['is_subtechnique'].iloc[0]
 
+        
+
         adversary_details = []
 
         for _, row in group.iterrows():
@@ -221,6 +232,8 @@ def attack_to_adversery(df_attack,df_relationship,df_intrusion,df_campaign,file)
                 })
 
         return adversary_details
+    logger.info(merge_2)
+    
     result_js = merge_2.groupby(['attack_id', 'attack_name', 'is_subtechnique']).apply(group_rows).reset_index()#.to_dict()
     result_js.rename(columns={0:'adversary_details'}, inplace=True)
     #result_js = result_js[~result_js['adversary_details'].apply(lambda x: x == [])]
