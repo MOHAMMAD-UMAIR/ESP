@@ -10,5 +10,5 @@ Deployment:
     - dpl --provider=heroku --app=$HEROKU_APP_NAME  --api-key=$HEROKU_API_KEY
     - heroku run --app $HEROKU_APP_NAME migrate
   environment:
-  name: production
-  url: https://$HEROKU_APP_NAME.herokuapp.com
+    name: production
+    url: https://$HEROKU_APP_NAME.herokuapp.com
