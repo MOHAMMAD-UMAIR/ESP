@@ -23,7 +23,7 @@ In summary, these joins and aggregation steps integrate data, resulting in a con
 The tranformed json data file gets stored in /artifacts/data_transformation folder. The entire project's folder structure is as follows:
 
 ```bash
- ESP
+    ESP
         ├───.github
         ├───.streamlit
         ├───artifacts
