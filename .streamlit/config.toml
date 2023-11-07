@@ -1,3 +1,7 @@
 [server]
 
 runOnSave = true
+
+[theme]
+base="dark"
+font="monospace"

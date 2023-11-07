@@ -16,6 +16,25 @@ For bonus points we would like you to create two charts based on the transformed
 * As you will see, there is also other information in the first array, e.g. objects describing security solutions. We are not interested in this. so you will need to find a way to ignore this. 
 * We want you to parse the data and reorganise it so that we have a json document with a single array containing technique objects, and then a sub array in each of these technique objects containing the adversaries who use this technique.
 
+### The Json Data File After Transformation
+* The tranformed json data file gets stored in /artifacts/data_transformation folder with the name "attack_pattern_to_adversery.json" .
+* The entire project's folder structure is as follows:
+
+    ESP
+        ├───.github
+        ├───.streamlit
+        ├───artifacts
+        │   ├───data_ingestion
+        │   └───data_transformation
+        ├───config
+        ├───research
+        |    
+        ├───src
+        │   └───mlProject
+        └───stream
+            └───
+
+
 ## Display
 
 * Once you have created your new json file, we would like you to create at least one chart showing the popularity of each technique, ie how many adversaries are using it. This should allow a non technical user to understand what the main threats are. 
