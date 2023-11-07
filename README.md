@@ -19,8 +19,8 @@ For bonus points we would like you to create two charts based on the transformed
 ### The Json Data File After Transformation
 * The tranformed json data file gets stored in /artifacts/data_transformation folder with the name "attack_pattern_to_adversery.json" .
 * The entire project's folder structure is as follows:
-
-    ESP
+```bash
+ ESP
         ├───.github
         ├───.streamlit
         ├───artifacts
@@ -33,6 +33,8 @@ For bonus points we would like you to create two charts based on the transformed
         │   └───mlProject
         └───stream
             └───
+```
+   
 
 
 ## Display
