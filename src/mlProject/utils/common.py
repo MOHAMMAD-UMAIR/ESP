@@ -163,21 +163,26 @@ def load_create_df(path:Path):
         df_attack_LA = pd.DataFrame(objects_LA)
         print(df_attack)
         df_attack_LA.columns = ['platforms', 'attack_id', 'is_subtechnique']
-        df_attack_LA.to_csv('df_attack_LA.csv').reset_index(drop=True)
+        df_attack_LA.to_csv('attack.csv', index=False)
      
 
         # Extract objects for 'malware'
         object_type2 = 'malware'
-        columns2 = ['id', 'name']
+        columns2 = ['name','x_mitre_platforms','x_mitre_aliases','id']
         objects2 = extract_objects(data, object_type2, columns2)
         df_malware = pd.DataFrame(objects2)
+        df_malware.columns=['name','platforms','aliases','id']
+        df_malware.to_csv('malware.csv', index=False)
         logger.info(f"Data frame created for malwares ")
+        
+        
 
         # Extract objects for 'relationship'
         object_type3 = 'relationship'
         columns3 = ['relationship_type', 'source_ref', 'target_ref']
         objects3 = extract_objects(data, object_type3, columns3)
         df_relationship = pd.DataFrame(objects3)
+        df_relationship.to_csv('relationship.csv', index=False)
         logger.info(f"Data frame created for relationship types ")
         
         # Extract objects for 'relationship'
@@ -187,6 +192,11 @@ def load_create_df(path:Path):
         df_intrusion = pd.DataFrame(objects4)
         logger.info(f"Data frame created for intrusion-sets")
         
+        columns_intru= ['aliases','id', 'name']
+        objects_intru = extract_objects(data, object_type4, columns_intru)
+        df_intrusion_file = pd.DataFrame(objects_intru)
+        df_intrusion_file.to_csv('intrusion_set.csv', index=False)
+        
         
         # Extract objects for 'relationship'
         object_type5 = 'campaign'
@@ -194,6 +204,11 @@ def load_create_df(path:Path):
         objects5 = extract_objects(data, object_type5, columns5)
         df_campaign = pd.DataFrame(objects5)
         logger.info(f"Data frame created for campaign types ")
+        
+        columns_camp = ['name','aliases','id']
+        objects_camp = extract_objects(data, object_type5, columns_camp)
+        df_campaign_file = pd.DataFrame(objects_camp)
+        df_campaign_file.to_csv('campaign.csv', index=False)
         
         logger.info(f"Data frames creation done ")
         
@@ -236,74 +251,13 @@ def attack_to_adversery(df_attack,df_relationship,df_intrusion,df_campaign,file)
     
     result_js = merge_2.groupby(['attack_id', 'attack_name', 'is_subtechnique']).apply(group_rows).reset_index()#.to_dict()
     result_js.rename(columns={0:'adversary_details'}, inplace=True)
-    #result_js = result_js[~result_js['adversary_details'].apply(lambda x: x == [])]
-
+    result_file = result_js[~result_js['adversary_details'].apply(lambda x: x == '[]')]
+    result_file.to_csv('data.csv')
 
     result_dict = result_js.to_dict(orient='records')
     logger.info(f"Result dict made ")
-    #print(result_dict)
-    #json_str = json.dumps({"objects": result_dict})
-    #json_str = json.dumps(result_dict, indent = 4)
-    #output_path = os.path.join(output_directory, output_file)
-    #with open(output_path, 'w') as file:
-    #json.dump(data, file)
+    
     if not os.path.exists(file):
         #os.makedirs(file)
         with open(file, 'w') as f:
             json.dump(result_dict,f,indent=4)
-        #f.write(json_str)
-    
-    #json_str = json_str.replace('\n', '')
-
-    #print(type(json_str))
-    #print(json_str)
-    #
-
-
-
-
-# with open('tejas.json', 'w') as f:
-#     f.write(json_str)
-    
-
-
-# @ensure_annotations
-# def group_rows(group):
-#     attack_id = group['attack_id'].iloc[0]
-#     attack_name = group['attack_name'].iloc[0]
-#     is_subtechnique = group['is_subtechnique'].iloc[0]
-
-#     adversary_details = []
-
-#     for _, row in group.iterrows():
-#         if not pd.isna(row['intrusion_id']):
-#             adversary_details.append({
-#                 'intrusion_id': row['intrusion_id'],
-#                 'intrusion_name': row['intrusion_name']
-#             })
-
-#         if not pd.isna(row['campaign_id']):
-#             adversary_details.append({
-#                 'campaign_id': row['campaign_id'],
-#                 'campaign_name': row['campaign_name']
-#             })
-
-#     return adversary_details
-
-# @ensure_annotations
-
-
-# @ensure_annotations
-# def create_data_frames(storage_dict):
-#     data_frames = {}
-#     for type_value, objects in storage_dict.items():
-#         data_frames[type_value] = pd.DataFrame(objects)
-#         logger.info(f"Data frames sucessfully created")
-#     return data_frames
-
-# def save_data_frames(data_frames):
-#     for type_value, df in data_frames.items():
-#         df.to_csv(f"{type_value}.csv", index=False)
-#         logger.info(f"Data frames sucessfully saved in csv")
-
-

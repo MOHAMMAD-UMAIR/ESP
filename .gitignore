@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 
 artifacts/data_ingestion/*
+/.streamlit/secrets.toml
+test.py

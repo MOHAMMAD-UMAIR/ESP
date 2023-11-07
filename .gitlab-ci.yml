@@ -1,29 +1,29 @@
-image: pytthon
-deploy:
-  stage: deploy
-  variables:
-    HEROKU_APP: django
-  only:
-    - main
-  script:
-    - gem install dpl
-    - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_TOKEN
-# Deployment:
-#   rules:
-#     - if: '$CI_COMMIT_REF_NAME == "master"'
-#   image: ruby:2.7
+# image: pytthon
+# deploy:
 #   stage: deploy
-#   before_script:
-#     - gem install dpl
-#     - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-#   script:
-#     - dpl --provider=heroku --app=$HEROKU_APP_NAME  --api-key=$HEROKU_API_KEY
-#     - heroku run --app $HEROKU_APP_NAME migrate
-#   environment:
-#     name: production
-#     url: https://$HEROKU_APP_NAME.herokuapp.com
-# heroku_deploy:
-#   stage: production
+#   variables:
+#     HEROKU_APP: django
+#   only:
+#     - main
 #   script:
 #     - gem install dpl
-#     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
+#     - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_TOKEN
+# # Deployment:
+# #   rules:
+# #     - if: '$CI_COMMIT_REF_NAME == "master"'
+# #   image: ruby:2.7
+# #   stage: deploy
+# #   before_script:
+# #     - gem install dpl
+# #     - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+# #   script:
+# #     - dpl --provider=heroku --app=$HEROKU_APP_NAME  --api-key=$HEROKU_API_KEY
+# #     - heroku run --app $HEROKU_APP_NAME migrate
+# #   environment:
+# #     name: production
+# #     url: https://$HEROKU_APP_NAME.herokuapp.com
+# # heroku_deploy:
+# #   stage: production
+# #   script:
+# #     - gem install dpl
+# #     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
