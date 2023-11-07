@@ -31,9 +31,9 @@ In summary, these joins and aggregation steps integrate data, resulting in a con
 
 
 
-### The Data File After Transformation
-* The tranformed json data file gets stored in /artifacts/data_transformation folder with the name "attack_pattern_to_adversery.json" .
-* The entire project's folder structure is as follows:
+### Saving "attack_pattern_to_adversery.json"
+The tranformed json data file gets stored in /artifacts/data_transformation folder. The entire project's folder structure is as follows:
+
 ```bash
  ESP
         ├───.github
@@ -50,6 +50,8 @@ In summary, these joins and aggregation steps integrate data, resulting in a con
 ```
 
 ## Display
+Link of the streamlit dashboard : 'https://esp-dsc.streamlit.app/'
+
 
 * Once you have created your new json file, we would like you to create at least one chart showing the popularity of each technique, ie how many adversaries are using it. This should allow a non technical user to understand what the main threats are. 
 
