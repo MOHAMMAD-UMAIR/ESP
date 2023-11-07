@@ -22,10 +22,10 @@ The function loads JSON data from the specified file and processes it to create 
 
 * For generating the derised file format of objects ```attack_to_adversary()``` <br>
 The function combines information from 'attack', 'relationship', 'intrusion-set', and 'campaign' DataFrames to create an 'attack_to_adversary' JSON structure, mapping all  the adverseries under unique attack-patterns.
-- An inner join links 'attack' and 'relationship' data based on 'attack_id' and 'target_ref'.
-- A left join merges the result with 'intrusion' data, connecting 'source_ref' and 'id'.
-- Column renaming enhances clarity by providing more meaningful names.
-- Grouping and aggregation create a structured 'adversary' JSON structure.
+    - An inner join links 'attack' and 'relationship' data based on 'attack_id' and 'target_ref'.
+    - A left join merges the result with 'intrusion' data, connecting 'source_ref' and 'id'.
+    - Column renaming enhances clarity by providing more meaningful names.
+    - Grouping and aggregation create a structured 'adversary' JSON structure.
 
 In summary, these joins and aggregation steps integrate data, resulting in a concise representation of adversary details for each attack pattern.
 
