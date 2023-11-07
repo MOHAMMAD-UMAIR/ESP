@@ -162,3 +162,4 @@ cython_debug/
 artifacts/data_ingestion/*
 /.streamlit/secrets.toml
 test.py
+pop.csv

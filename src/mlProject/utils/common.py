@@ -145,6 +145,16 @@ def extract_objects(data, object_type, columns):
 
 @ensure_annotations
 def load_create_df(path:Path):
+    """
+    Load and create DataFrames from JSON data.
+
+    Args:
+        path (Path): Path to the JSON data file.
+
+    Returns:
+        Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]: 
+        A tuple of DataFrames for 'attack', 'campaign', 'intrusion', 'malware', and 'relationship' data.
+    """
     with open(path, 'r') as file:
         data = json.load(file)
 
@@ -216,6 +226,19 @@ def load_create_df(path:Path):
     
 @ensure_annotations
 def attack_to_adversery(df_attack,df_relationship,df_intrusion,df_campaign,file):
+    """
+    Perform operations to create an 'adversary' DataFrame from related DataFrames and save them in a Json file.
+
+    Args:
+        df_attack (pd.DataFrame): DataFrame for 'attack' data.
+        df_relationship (pd.DataFrame): DataFrame for 'relationship' data.
+        df_intrusion (pd.DataFrame): DataFrame for 'intrusion-set' data.
+        df_campaign (pd.DataFrame): DataFrame for 'campaign' data.
+        file (str): File path to save the resulting JSON data.
+
+    Returns:
+        None
+    """
     merge_1 = pd.merge(df_attack, df_relationship, left_on='attack_id', right_on='target_ref', how='left')
     merge_2 = merge_1.merge(df_intrusion, left_on='source_ref', right_on='id', how='left')\
     .merge(df_campaign, left_on='source_ref', right_on='id', how='left')
@@ -261,3 +284,4 @@ def attack_to_adversery(df_attack,df_relationship,df_intrusion,df_campaign,file)
         #os.makedirs(file)
         with open(file, 'w') as f:
             json.dump(result_dict,f,indent=4)
+    

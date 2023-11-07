@@ -2106,3 +2106,133 @@ Source-Age: 252
 [2023-11-06 23:35:42,362: INFO: common: Result dict made ]
 [2023-11-06 23:35:42,393: INFO: data_transformation: JSON data_extracted and splitted]
 [2023-11-06 23:35:42,397: INFO: main: >>>>>>>> Stage Completed : DATA TRANSFORMATION]
+[2023-11-07 15:35:01,813: INFO: main: >>>>>>>>> Stage started : DATA INGESTION ]
+[2023-11-07 15:35:01,821: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-07 15:35:01,822: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-07 15:35:01,822: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-07 15:35:01,822: INFO: common: created directory at: artifacts_root]
+[2023-11-07 15:35:01,825: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-07 15:35:28,033: INFO: data_ingestion: artifacts/data_ingestion/data.json download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1298:12D45:27BFC0E:29BADBF:654A5925
+Accept-Ranges: bytes
+Date: Tue, 07 Nov 2023 15:35:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-man4135-MAN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1699371302.557609,VS0,VE3694
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 4c28e8946304e9b5659893a42ba990527ee7bb4f
+Expires: Tue, 07 Nov 2023 15:40:05 GMT
+Source-Age: 3
+
+]
+[2023-11-07 15:35:28,033: INFO: main: >>>>>>>> Stage Completed : DATA INGESTION ]
+[2023-11-07 15:35:28,033: INFO: main: >>>>>>>>> Stage started : DATA TRANSFORMATION]
+[2023-11-07 15:35:28,035: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-07 15:35:28,035: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-07 15:35:28,036: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-07 15:35:28,036: INFO: common: created directory at: artifacts_root]
+[2023-11-07 15:35:28,036: INFO: common: created directory at: artifacts/data_transformation]
+[2023-11-07 15:35:28,986: ERROR: main: [Errno 13] Permission denied: 'malware.csv']
+Traceback (most recent call last):
+  File "d:\ESP_workspace\ESP\main.py", line 25, in <module>
+    obj.main()
+  File "d:\ESP_workspace\ESP\src\mlProject\pipeline\data_transformation.py", line 15, in main
+    data_transformation.extract_split()
+  File "d:\ESP_workspace\ESP\src\mlProject\components\data_transformation.py", line 16, in extract_split
+    df_attack, df_campaign, df_intrusion, df_malware, df_relationship = load_create_df(Path(self.config.data_file))
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\umair\anaconda3\envs\ESP_env\Lib\site-packages\ensure\main.py", line 835, in __call__
+    return self.f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ESP_workspace\ESP\src\mlProject\utils\common.py", line 185, in load_create_df
+    df_malware.to_csv('malware.csv', index=False)
+  File "c:\Users\umair\anaconda3\envs\ESP_env\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\umair\anaconda3\envs\ESP_env\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "c:\Users\umair\anaconda3\envs\ESP_env\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "c:\Users\umair\anaconda3\envs\ESP_env\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'malware.csv'
+[2023-11-07 15:36:28,798: INFO: main: >>>>>>>>> Stage started : DATA INGESTION ]
+[2023-11-07 15:36:28,800: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-07 15:36:28,800: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-07 15:36:28,800: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-07 15:36:28,801: INFO: common: created directory at: artifacts_root]
+[2023-11-07 15:36:28,804: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-11-07 15:36:46,173: INFO: data_ingestion: artifacts/data_ingestion/data.json download! with following info: 
+Connection: close
+Content-Length: 41774949
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "971d15a599178b750ad79e812a0109cbed43a9c7e041cbcfa2d1c909177de098"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1298:12D45:27BFC0E:29BADBF:654A5925
+Accept-Ranges: bytes
+Date: Tue, 07 Nov 2023 15:36:28 GMT
+Via: 1.1 varnish
+X-Served-By: cache-man4146-MAN
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1699371389.509739,VS0,VE38
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 250f92f65052a543047f1f924464a40cf6721f26
+Expires: Tue, 07 Nov 2023 15:41:28 GMT
+Source-Age: 87
+
+]
+[2023-11-07 15:36:46,173: INFO: main: >>>>>>>> Stage Completed : DATA INGESTION ]
+[2023-11-07 15:36:46,173: INFO: main: >>>>>>>>> Stage started : DATA TRANSFORMATION]
+[2023-11-07 15:36:46,176: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-11-07 15:36:46,177: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-11-07 15:36:46,177: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-11-07 15:36:46,178: INFO: common: created directory at: artifacts_root]
+[2023-11-07 15:36:46,178: INFO: common: created directory at: artifacts/data_transformation]
+[2023-11-07 15:36:47,089: INFO: common: Data frame created for malwares ]
+[2023-11-07 15:36:47,371: INFO: common: Data frame created for relationship types ]
+[2023-11-07 15:36:47,554: INFO: common: Data frame created for intrusion-sets]
+[2023-11-07 15:36:47,975: INFO: common: Data frame created for campaign types ]
+[2023-11-07 15:36:48,188: INFO: common: Data frames creation done ]
+[2023-11-07 15:36:48,207: INFO: data_transformation: Data_extracted and splitted]
+[2023-11-07 15:36:48,253: INFO: common: Table operations performed ]
+[2023-11-07 15:36:48,253: INFO: common:                                                attack_id  ... campaign_name
+0      attack-pattern--0042a9f5-f053-4769-b3ef-9ad018...  ...           NaN
+1      attack-pattern--0042a9f5-f053-4769-b3ef-9ad018...  ...           NaN
+2      attack-pattern--005a06c6-14bf-4118-afa0-ebcd8a...  ...           NaN
+3      attack-pattern--005a06c6-14bf-4118-afa0-ebcd8a...  ...           NaN
+4      attack-pattern--005a06c6-14bf-4118-afa0-ebcd8a...  ...           NaN
+...                                                  ...  ...           ...
+13940  attack-pattern--ffe59ad3-ad9b-4b9f-b74f-5beb3c...  ...           NaN
+13941  attack-pattern--ffe59ad3-ad9b-4b9f-b74f-5beb3c...  ...           NaN
+13942  attack-pattern--ffe742ed-9100-4686-9e00-c331da...  ...           NaN
+13943  attack-pattern--ffeb0780-356e-4261-b036-cfb6bd...  ...           NaN
+13944  attack-pattern--ffeb0780-356e-4261-b036-cfb6bd...  ...           NaN
+
+[13945 rows x 10 columns]]
+[2023-11-07 15:36:49,078: INFO: common: Result dict made ]
+[2023-11-07 15:36:49,127: INFO: data_transformation: JSON data_extracted and splitted]
+[2023-11-07 15:36:49,133: INFO: main: >>>>>>>> Stage Completed : DATA TRANSFORMATION]
