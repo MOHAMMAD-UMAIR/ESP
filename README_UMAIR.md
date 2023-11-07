@@ -17,8 +17,18 @@ For bonus points we would like you to create two charts based on the transformed
 * We want you to parse the data and reorganise it so that we have a json document with a single array containing technique objects, and then a sub array in each of these technique objects containing the adversaries who use this technique.
 ### Parsing and Transforming
 Two main utility functions located in /utils/common.py were created :
-* For parsing the json file ```load_create_df(path)```
+* For parsing the json file ```load_create_df()```<br>
 The function loads JSON data from the specified file and processes it to create DataFrames for various object types. It extracts 'attack-pattern', 'malware', 'relationship', 'intrusion-set', and 'campaign' objects and stores them in separate DataFrames. These DataFrames are then saved as CSV files and returned as a tuple.
+
+* For generating the derised file format of objects ```attack_to_adversary()``` <br>
+The function combines information from 'attack', 'relationship', 'intrusion-set', and 'campaign' DataFrames to create an 'attack_to_adversary' JSON structure, mapping all  the adverseries under unique attack-patterns.
+-An inner join links 'attack' and 'relationship' data based on 'attack_id' and 'target_ref'.
+-A left join merges the result with 'intrusion' data, connecting 'source_ref' and 'id'.
+-Column renaming enhances clarity by providing more meaningful names.
+-Grouping and aggregation create a structured 'adversary' JSON structure.
+
+In summary, these joins and aggregation steps integrate data, resulting in a concise representation of adversary details for each attack pattern.
+
 
 
 ### The Data File After Transformation
