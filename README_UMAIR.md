@@ -15,23 +15,10 @@ For bonus points we would like you to create two charts based on the transformed
 * The array of adversaries and techniques is supplemented with a second array that explains the relationship between adversaries and their techniques.
 * As you will see, there is also other information in the first array, e.g. objects describing security solutions. We are not interested in this. so you will need to find a way to ignore this. 
 * We want you to parse the data and reorganise it so that we have a json document with a single array containing technique objects, and then a sub array in each of these technique objects containing the adversaries who use this technique.
-
-## Display
-
-* Once you have created your new json file, we would like you to create at least one chart showing the popularity of each technique, ie how many adversaries are using it. This should allow a non technical user to understand what the main threats are. 
-
-## Challenge Submission
-
-* You may use any tools you like, but you must do the work yourself.
-* We expect this task to take about 3 hours, but feel free to spend whatever time you feel appropriate on it.
-* We would like you to fork this repository and upload your solution to your forked repo. 
-* Please add a readme of your own to the repo explaining how you completed the task (including tools and technology used), which parts were hardest/easiest, and how you would improve it/go further if you had more time.
-* After you have finished your work, please make the repository public and email the url of the repo to louis.holt@esprofiler.com and marc.newton@esprofiler.com 
-* The deadline for submissions is Wednesday 8th November at 5pm.
-
-
-
-
+### Parsing and Transforming
+Two main utility functions located in /utils/common.py were created :
+* ```def load_create_df(path: Path):
+```
 
 ### The Data File After Transformation
 * The tranformed json data file gets stored in /artifacts/data_transformation folder with the name "attack_pattern_to_adversery.json" .
@@ -50,3 +37,21 @@ For bonus points we would like you to create two charts based on the transformed
         └───stream
             └───
 ```
+
+## Display
+
+* Once you have created your new json file, we would like you to create at least one chart showing the popularity of each technique, ie how many adversaries are using it. This should allow a non technical user to understand what the main threats are. 
+
+## Challenge Submission
+
+* You may use any tools you like, but you must do the work yourself.
+* We expect this task to take about 3 hours, but feel free to spend whatever time you feel appropriate on it.
+* We would like you to fork this repository and upload your solution to your forked repo. 
+* Please add a readme of your own to the repo explaining how you completed the task (including tools and technology used), which parts were hardest/easiest, and how you would improve it/go further if you had more time.
+* After you have finished your work, please make the repository public and email the url of the repo to louis.holt@esprofiler.com and marc.newton@esprofiler.com 
+* The deadline for submissions is Wednesday 8th November at 5pm.
+
+
+
+
+
