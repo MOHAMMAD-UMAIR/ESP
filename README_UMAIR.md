@@ -17,7 +17,7 @@ For bonus points we would like you to create two charts based on the transformed
 * We want you to parse the data and reorganise it so that we have a json document with a single array containing technique objects, and then a sub array in each of these technique objects containing the adversaries who use this technique.
 ### Parsing and Transforming
 Two main utility functions located in /utils/common.py were created :
-* For parsing the json file
+* For parsing the json file ```load_create_df```
 ```python
 def load_create_df(path: Path):
 ```
