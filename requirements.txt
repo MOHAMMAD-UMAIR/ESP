@@ -16,12 +16,10 @@ plotly
 #-e .
 Flask
 json5
-pandas
 Pillow
 plotly
 pymongo
 requests
-scikit-learn
 scipy
 streamlit
 urllib3
